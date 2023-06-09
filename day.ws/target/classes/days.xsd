@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getDaysRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getDaysResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="day" type="tns:day"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="day">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="traduction" type="xs:string"/>
+            <xs:element name="numero" type="xs:string"/>
+            <xs:element name="ntraduc" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
